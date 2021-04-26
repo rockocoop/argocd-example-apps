@@ -36,6 +36,8 @@ spec:
             httpGet:
               path: /
               port: http
+          securityContext:
+            privileged: true
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
