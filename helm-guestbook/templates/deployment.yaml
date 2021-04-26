@@ -36,8 +36,6 @@ spec:
             httpGet:
               path: /
               port: http
-          serviceAccount: guestbook
-          serviceAccountName: guestbook
           securityContext:
             privileged: true
           resources:
