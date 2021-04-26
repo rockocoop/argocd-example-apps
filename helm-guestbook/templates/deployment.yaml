@@ -43,6 +43,8 @@ spec:
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
+      serviceAccount: guestbook
+      serviceAccountName: guestbook
       nodeSelector:
 {{ toYaml . | indent 8 }}
     {{- end }}
